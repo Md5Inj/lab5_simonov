@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -61,14 +62,14 @@ int main()
     
     for (int i = 0; i < N; i++)
     {
-        if (a[i].from == input)
+        if (strcmp(a[i].from, input))
         {
             print(a, N);
             finded = true;
             continue;
         }
 
-        if (a[i].to == input)
+        if (strcmp(a[i].to, input))
         {
             print(a, N);
             finded = true;
